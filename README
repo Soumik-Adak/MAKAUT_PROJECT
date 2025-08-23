@@ -1,17 +1,30 @@
-*** A Large-Scale Dataset for Segmentation and Classification ***
+🐟 A Large-Scale Dataset for Fish Segmentation and Classification
+📌 General Introduction
 
+This dataset contains 9 different seafood types collected from a supermarket in Izmir, Turkey, as part of a university-industry collaboration project at Izmir University of Economics.
+The dataset was first published in ASYU 2020.
 
+The dataset includes:
 
+🐟 Gilt-head bream
 
-***General Introduction***
+🐠 Red sea bream
 
-This dataset contains 9 different seafood types collected from a supermarket in Izmir, Turkey
-for a university-industry collaboration project at Izmir University of Economics, and this work
-was published in ASYU 2020.
-Dataset includes, gilt head bream, red sea bream, sea bass, red mullet, horse mackerel, 
-black sea sprat, striped red mullet, trout, shrimp image samples. 
+🐟 Sea bass
 
-If you use this dataset in your work, please consider to cite:
+🐠 Red mullet
+
+🐟 Horse mackerel
+
+🐠 Black sea sprat
+
+🐟 Striped red mullet
+
+🐟 Trout
+
+🍤 Shrimp
+
+If you use this dataset in your work, please cite:
 
 @inproceedings{ulucan2020large,
   title={A Large-Scale Dataset for Fish Segmentation and Classification},
@@ -22,32 +35,72 @@ If you use this dataset in your work, please consider to cite:
   organization={IEEE}
 }
 
-* O.Ulucan , D.Karakaya and M.Turkan.(2020) A large-scale dataset for fish segmentation and classification.
-In Conf. Innovations Intell. Syst. Appli. (ASYU)
 
-***Purpose of the work***
+Reference:
+O. Ulucan, D. Karakaya, and M. Turkan. (2020). A Large-Scale Dataset for Fish Segmentation and Classification.
+In Conf. Innovations Intell. Syst. Appli. (ASYU).
 
-This dataset was collected in order to carry out segmentation, feature extraction and classification tasks
-and compare the common segmentation, feature extraction and classification algortihms (Semantic Segmentation, Convolutional Neural Networks, Bag of Features).
-All of the experiment results prove the usability of our dataset for purposes mentioned above.
+🎯 Purpose of the Work
+
+The dataset was created to support:
+✔️ Segmentation (semantic segmentation tasks)
+✔️ Feature extraction (traditional and modern approaches)
+✔️ Classification (CNNs, Bag of Features, etc.)
+
+🔍 All experiment results prove that this dataset is highly usable and reliable for segmentation, classification, and related computer vision tasks.
+
+📷 Data Gathering & Augmentation
+
+Images were collected using 2 different cameras:
+
+📸 Kodak Easyshare Z650 (2832 × 2128 resolution)
+
+📸 Samsung ST60 (1024 × 768 resolution)
+
+Preprocessing:
+
+Resized to 590 × 445 (while preserving aspect ratio).
+
+Augmentation: flipping + rotation applied to both RGB images and their ground truth masks.
+
+Final Dataset:
+
+2000 images per class (1000 original RGB + 1000 ground truth masks).
+
+📂 Dataset Structure
+
+Each class has 1000 augmented images and their 1000 pair-wise ground truth labels.
+
+Fish_Dataset/
+│── Gilt-head bream/
+│    ├── Images/
+│    ├── Ground Truth/
+│── Red sea bream/
+│── Sea bass/
+│── Red mullet/
+│── Horse mackerel/
+│── Black sea sprat/
+│── Striped red mullet/
+│── Trout/
+│── Shrimp/
 
 
-***Data Gathering Equipment and Data Augmentation***
+📌 Example:
+👉 To access the ground truth images of Shrimp, follow:
+Fish_Dataset → Shrimp → Shrimp GT
 
-Images were collected via 2 different cameras, Kodak Easyshare Z650 and Samsung ST60. 
-Therefore, the resolution of the images are 2832 x 2128, 1024 x 768, respectively.
+Each image is ordered as:
 
-Before the segmentation, feature extraction and classification process, the dataset was resized to 590 x 445
-by preserving the aspect ratio. After resizing the images, all labels in the dataset were augmented (by flipping and rotating). 
+00000.png → 01000.png
 
-At the end of the augmentation process, the number of total images for each class became 2000; 1000 for the RGB fish images
-and 1000 for their pair-wise ground truth labels. 
+🚀 Applications
 
+This dataset can be applied in:
 
-***Description of the data in this data set***
+🧪 Computer Vision Research
 
-The dataset contains 9 different seafood types. For each class, there are 1000 augmented images and their pair-waise augmented ground truths.
-Each class can be found in the "Fish_Dataset" file with their ground truth labels. All images for each class are ordered from "00000.png" to "01000.png".
- 
-For example, if you want to access the ground truth images of the shrimp in the dataset, the order should be followed is "Fish->Shrimp->Shrimp GT". 
- 
+🐟 Seafood quality control & recognition
+
+📊 Food industry automation
+
+🤖 AI & Deep Learning projects (CNN, U-Net, Mask R-CNN, etc.)
