@@ -21,6 +21,75 @@ If you use this dataset in your work, please cite:
 ```bibtex
 @inproceedings{ulucan2020large,
   title={A Large-Scale Dataset for Fish Segmentation and Classification},
+
+Reference:
+O. Ulucan, D. Karakaya, and M. Turkan. (2020). A Large-Scale Dataset for Fish Segmentation and Classification.
+In Conf. Innovations Intell. Syst. Appli. (ASYU).
+
+### 🎯 Purpose of the Work
+
+The dataset was created to support:
+✔️ Segmentation (semantic segmentation tasks)
+✔️ Feature extraction (traditional and modern approaches)
+✔️ Classification (CNNs, Bag of Features, etc.)
+
+🔍 All experiment results prove that this dataset is highly usable and reliable for segmentation, classification, and related computer vision tasks.
+
+📷 Data Gathering & Augmentation
+
+Images were collected using 2 different cameras:
+
+📸 Kodak Easyshare Z650 (2832 × 2128 resolution)
+
+📸 Samsung ST60 (1024 × 768 resolution)
+
+Preprocessing:
+
+Resized to 590 × 445 (while preserving aspect ratio).
+
+Augmentation: flipping + rotation applied to both RGB images and their ground truth masks.
+
+Final Dataset:
+
+2000 images per class (1000 original RGB + 1000 ground truth masks).
+
+📂 Dataset Structure
+
+Each class has 1000 augmented images and their 1000 pair-wise ground truth labels.
+
+Fish_Dataset/
+│── Gilt-head bream/
+│    ├── Images/
+│    ├── Ground Truth/
+│── Red sea bream/
+│── Sea bass/
+│── Red mullet/
+│── Horse mackerel/
+│── Black sea sprat/
+│── Striped red mullet/
+│── Trout/
+│── Shrimp/
+
+
+📌 Example:
+👉 To access the ground truth images of Shrimp, follow:
+Fish_Dataset → Shrimp → Shrimp GT
+
+Each image is ordered as:
+
+00000.png → 01000.png
+
+🚀 Applications
+
+This dataset can be applied in:
+
+🧪 Computer Vision Research
+
+🐟 Seafood quality control & recognition
+
+📊 Food industry automation
+
+🤖 AI & Deep Learning projects (CNN, U-Net, Mask R-CNN, etc.)
   author={Ulucan, Oguzhan and Karakaya, Diclehan and Turkan, Mehmet},
   booktitle={2020 Innovations in Intelligent Systems and Applications Conference (ASYU)},
   pages={1--5},
